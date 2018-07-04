@@ -52,20 +52,20 @@
     3）编写客户端代码
     假设我们的代码放在目录E:\Test\AppiumDemo 中。首先把 Appium-Python-Client-0.22.tar.gz 里面的 appium 目录解压到AppiumClientPython 中， 把 selenium-2.53.2.tar.gz里面的 selenium 目录解压到AppiumClientPython中。
     4）创建文件demo_appium.py , 编辑内容：
-#coding=utf-8
-from appium import webdriver
-desired_caps = {}
-desired_caps['platformName'] = 'Android'
-desired_caps['platformVersion'] = '6.0.1'
-desired_caps['deviceName'] = 'Mi Max'
-desired_caps['appPackage'] = 'com.android.calculator2'
-desired_caps['appActivity'] = '.Calculator'
-driver = webdriver.Remote('http://localhost:4723/wd/hub', desired_caps)
-driver.find_element_by_name("1").click()
-driver.find_element_by_name("+").click()
-driver.find_element_by_name("6").click()
-driver.find_element_by_name("=").click()
-driver.quit()
+      #coding=utf-8
+      from appium import webdriver
+      desired_caps = {}
+      desired_caps['platformName'] = 'Android'
+      desired_caps['platformVersion'] = '6.0.1'
+      desired_caps['deviceName'] = 'Mi Max'
+      desired_caps['appPackage'] = 'com.android.calculator2'
+      desired_caps['appActivity'] = '.Calculator'
+      driver = webdriver.Remote('http://localhost:4723/wd/hub', desired_caps)
+      driver.find_element_by_name("1").click()
+      driver.find_element_by_name("+").click()
+      driver.find_element_by_name("6").click()
+      driver.find_element_by_name("=").click()
+      driver.quit()
     5）运行
     打开命令行，cd到E:\PythonTest\AppiumClientPython 中，运行 python hello_appium.py, 正常情况可以看到手机按照代码控制，打开计算器，逐个点击按钮完成计算。
 
