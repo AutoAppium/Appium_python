@@ -14,7 +14,7 @@
     PATH - %JAVA_HOME%\jre\bin;%JAVA_HOME%\bin
   
   上述软件都准备好后，则进入搭建步骤。
-  ### 2. 安装步骤：
+  ## 2. 安装步骤：
   1. 下载安装Android SDK
       - 下载地址：http://developer.android.com/sdk/index.html
       
@@ -45,7 +45,7 @@
   6. 选择Python版本的Lib: Appium-Python-Client-0.22.tar.gz
   7. 由于Appium依赖于Selemium,所以还要下载 Selemium Lib: selenium-2.53.2.tar.gz   https://pypi.python.org/pypi/selenium
  
- ### 启动Appium，真机运行
+ ## 3. 启动Appium，真机运行
   1) 启动Appium
    打开命令行，输入appium， 显示成功启动：
   2）连接Android手机
