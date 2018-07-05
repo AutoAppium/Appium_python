@@ -52,7 +52,7 @@
  3）编写客户端代码
  假设我们的代码放在目录E:\Test\AppiumDemo 中。首先把 Appium-Python-Client-0.22.tar.gz 里面的 appium 目录解压到AppiumClientPython 中， 把 selenium-2.53.2.tar.gz里面的 selenium 目录解压到AppiumClientPython中。
  4）创建文件demo_appium.py , 编辑内容：
-```
+```python
   #coding=utf-8
   from appium import webdriver
   desired_caps = {}
