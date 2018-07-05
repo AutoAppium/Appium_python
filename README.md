@@ -46,12 +46,12 @@
   7. 由于Appium依赖于Selemium,所以还要下载 Selemium Lib: selenium-2.53.2.tar.gz   https://pypi.python.org/pypi/selenium
  
  ## 3. 启动Appium，真机运行
-  1) 启动Appium
-   打开命令行，输入appium， 显示成功启动：
-  2）连接Android手机
-  3）编写客户端代码
+  ####1) 启动Appium
+   打开命令行，输入appium， 显示成功启动。
+  ####2）连接Android手机
+  ####3）编写客户端代码
     假设我们的代码放在目录E:\Test\AppiumDemo 中。首先把 Appium-Python-Client-0.22.tar.gz 里面的 appium 目录解压到AppiumClientPython 中， 把 selenium-2.53.2.tar.gz里面的 selenium 目录解压到AppiumClientPython中。
-  4）创建文件demo_appium.py , 编辑内容：
+  ####4）创建文件demo_appium.py , 编辑内容：
 ```
   #coding=utf-8
   from appium import webdriver
@@ -68,7 +68,7 @@
   driver.find_element_by_name("=").click()
   driver.quit()
 ```
-  5）运行
+  ####5）运行
     打开命令行，cd到E:\PythonTest\AppiumClientPython 中，运行 python hello_appium.py, 正常情况可以看到手机按照代码控制，打开计算器，逐个点击按钮完成计算。
 
 
