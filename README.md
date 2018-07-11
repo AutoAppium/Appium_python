@@ -34,14 +34,27 @@
   4. 下载安装Nodejs
       - 下载地址：https://nodejs.org/en/
       - 需要配置环境变量，在PATH中添加：D:\Program Files\nodejs;
+      - 输入node -v，查看node安装版本
       
   5. 下载安装Appium
       下载地址：http://appium.io/downloads.html
-      - 需要配置环境变量 D:\Program Files (x86)\Appium\node_modules\.bin;
-      - 配置好后，启动cmd，
-      - 输入node -v，查看node安装版本
+      安装appium的2种方法：
+      1. Appium Desktop:
+      - 下载安装好后，配置环境变量
+      - 配置好后，启动cmd
+      - 安装appium-doctor: npm install -g appium-doctor
       - 输入appium-doctor检查appium的安装环境是否成功,出现'All checks were successfully.' 就安装成功了。
-  
+      - 如果安装的是desktop版本的appium，用命令行也可以启动appium，即允许以下js文件：
+        C:\Program Files (x86)\Appium\resources\app\node_modules\appium\build\lib\main.js
+      - cmd 命令：
+        cd C:\Program Files (x86)\Appium\resources\app\node_modules\appium\build\lib
+        node main.js
+      
+      2. Appium Server： 
+      - 安装appium server命令行：
+      npm install -g appium@1.8.1 （此方法需要翻墙，安装appium-chromedriver时）
+      - 直接在cmd终端输入appium即可启动appium server
+      
   6. 选择Python版本的Lib: Appium-Python-Client-0.22.tar.gz
   7. 由于Appium依赖于Selemium,所以还要下载 Selemium Lib: selenium-2.53.2.tar.gz   https://pypi.python.org/pypi/selenium
  
