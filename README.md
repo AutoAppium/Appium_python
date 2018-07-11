@@ -36,7 +36,7 @@
       - 需要配置环境变量，在PATH中添加：D:\Program Files\nodejs;
       
   5. 下载安装Appium
-      下载地址：http://appium.io/downloads.htmlom
+      下载地址：http://appium.io/downloads.html
       - 需要配置环境变量 D:\Program Files (x86)\Appium\node_modules\.bin;
       - 配置好后，启动cmd，
       - 输入node -v，查看node安装版本
