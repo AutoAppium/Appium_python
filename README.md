@@ -63,7 +63,8 @@
   打开命令行，输入appium， 显示成功启动。<br>
  2）连接Android手机<br>
  3）编写客户端代码<br>
-  假设我们的代码放在目录E:\Test\AppiumDemo 中。首先把 Appium-Python-Client-0.22.tar.gz 里面的 appium 目录解压到AppiumClientPython 中， 把 selenium-2.53.2.tar.gz里面的 selenium 目录解压到AppiumClientPython中。<br>
+  - 假设我们的代码放在目录E:\Test\AppiumDemo 中。首先把 Appium-Python-Client-0.22.tar.gz 里面的appium目录解压到AppiumDemo中， 把 selenium-2.53.2.tar.gz里面的selenium目录解压到AppiumDemo中。<br>
+  - 也可直接使用pycharm安装Appium-Python-Client和selenium。完成后可以看到对应的版本号
  4）创建文件demo_appium.py , 编辑内容：<br>
 ```python
   #coding=utf-8
@@ -82,7 +83,7 @@
   driver.quit()
 ```
 5）运行<br>
-打开命令行，cd到E:\PythonTest\AppiumClientPython 中，运行 python hello_appium.py, 正常情况可以看到手机按照代码控制，打开计算器，逐个点击按钮完成计算。<br>
+打开命令行，cd到E:\Test\AppiumDemo中，运行 python demo_appium.py, 正常情况可以看到手机按照代码控制，打开计算器，逐个点击按钮完成计算。<br>
 
 
 # 二、IOS下Appium自动化环境安装步骤
