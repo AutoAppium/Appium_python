@@ -64,7 +64,7 @@
  2）连接Android手机<br>
  3）编写客户端代码<br>
   - 假设我们的代码放在目录E:\Test\AppiumDemo 中。首先把 Appium-Python-Client-0.22.tar.gz 里面的appium目录解压到AppiumDemo中， 把 selenium-2.53.2.tar.gz里面的selenium目录解压到AppiumDemo中。<br>
-  - 也可直接使用pycharm安装Appium-Python-Client和selenium。完成后可以看到对应的版本号
+  - 也可直接使用pycharm安装Appium-Python-Client和selenium。完成后可以看到对应的版本号<br>
  4）创建文件demo_appium.py , 编辑内容：<br>
 ```python
   #coding=utf-8
