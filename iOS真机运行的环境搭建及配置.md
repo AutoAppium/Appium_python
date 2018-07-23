@@ -24,21 +24,21 @@
   - brew install node，由于新版的node已经集成了npm，所以node安装成功时npm也一并安装好了。同样可以通过输入 "npm -v" 来测试是否成功安装.
       
   3. 安装ios相关依赖库：
-- libimobiledevice
+- libimobiledevice<br>
 $ brew install libimobiledevice –HEAD #和iOS通讯使用，获取重要更新<br>
 如果没有安装 libimobiledevice，会导致Appium无法连接到iOS的设备<br>
 Error: No available formula with the name "–head" <br>
 用上面的命令遇到error后用下面的命令安装libimobiledevice<br>
  brew install -s --HEAD libimobiledevice ideviceinstaller<br>
 
-- carthage
+- carthage<br>
 ios10+以上要安装carthage，ios-deploy，真机需要安装xcpretty：<br>
 $ brew install carthage<br>
 
-- ideviceinstaller
+- ideviceinstaller<br>
 $ brew install ideviceinstaller   #安装app使用，只在ios9可用。<br>
       
-- xcpretty
+- xcpretty<br>
 $ gem update –system #最好用最新版本的gem这里请翻墙一下 2.6.3<br>
 $ sudo gem install xcpretty <br>
 安装xcpretty，经常安装失败，没反应，但是大家耐心等待吧，如果时间较长的话，建议大家切换个目录重新安装。<br>
@@ -47,7 +47,7 @@ $ gem sources --add https://gems.ruby-china.org/ --remove https://rubygems.org/<
 $ gem sources -l<br>
 https://gems.ruby-china.org<br>
 
-- ios-deploy
+- ios-deploy<br>
 $ npm install -g ios-deploy<br>
 如果要在iOS10+的系统上使用appium，则需要安装ios-deploy<br>
 安装iOS-deploy若遇到以下错误: <br>
@@ -61,15 +61,14 @@ cnpm这工具是马云为了国内局域网用户做的一款替代npm的工具(
 所以我们使用cnpm的时候，需要切换到/usr/local/lib(node模块默认安装路径)<br>
 $ cd /usr/local/lib<br>
 $ cnpm install -g ios-deploy<br>
-
       
 ### 安装Appium
       
   4. 安装Appium
-   - -> 直接下载dmg文件安装Appium Desktop
+   - -> 直接下载dmg文件安装Appium Desktop<br>
 https://github.com/appium/appium-desktop/releases/tag/v1.6.x
 
-   - -> 命令行安装appium
+   - -> 命令行安装appium<br>
 Git的方式安装需要先装git：
 $ brew install git
 安装前把历史版本卸载掉：
@@ -86,14 +85,14 @@ Notes: desktop的版本，会有一些问题。个人建议使用命令行操作
 
 2个关键点： 一个是安装appium-automator2相关的apk，一个是selendorid相关jar的时候会比较卡，这时候可以疯狂切换vpn<br>
 注意事项： 以上内容都不要在root用户下安装，默认不是root用户。终端命令的每一行的最左侧会显示用户，不是root就行。若出现权限问题，进入root用户将文件权限更改下。然后退出root用户继续安装即可<br>
-<br>
-chmod -R 777 pathForFile 使用此命令修改文件夹的权限。<br>
-- 若遇到问题：cwd错误<br>
+
+$ chmod -R 777 pathForFile 使用此命令修改文件夹的权限。<br>
+
+若遇到问题：cwd错误<br>
 执行以下命令：<br>
 $ sudo npm cache clean -f<br>
 $ sudo npm install -g n<br>
-（note： n 是node的版本管理工具。）<br>
-
+==注意==：n 是node的版本管理工具。<br>
 
   5. 检查是否安装成功需要用appium-doctor<br>
 先后用以下命令检查是否安装完成<br>
@@ -117,7 +116,6 @@ $ pip install Appium-Python-Client<br>
   9. 生成在真机上运行的包：<br>
 如果需要使用打包好的ipa包或者app包来进行安装，则需要用源码来打包成ipa进行安装。<br>
 如果知道bundle ID，可以直接下载安装好对应bundle ID的包, 直接进行启动app。<br>
-
 
 ### 启动Appium，真机运行
   10. AppiumDesktop运行程序<br>
