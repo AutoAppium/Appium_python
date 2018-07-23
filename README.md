@@ -100,7 +100,8 @@
   ## 2. Android测试安装步骤
 1.安装brew
 $ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"<br>
-mac自带了Ruby，网上很多给的安装命令下载的版本较低，使用上面的命令，可以安装最新的brew，安装成功后，$ brew -v 会显示相应的Homebrew的版本号。
+mac自带了Ruby，网上很多给的安装命令下载的版本较低，使用上面的命令，可以安装最新的brew。<br>
+安装成功后，$ brew -v 会显示相应的Homebrew的版本号。<br>
 （官方地址：http://brew.sh/index_zh-cn.html）；<br>
 
 2.安装node，appium的解释器
@@ -144,7 +145,8 @@ export PATH=${PATH}:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools:$ANDROID_HO
 6）. 更新刚配置的环境变量, 输入source .bash_profile<br>
 
 7. appium_doctor检测APPium是否安装成功
-未配置appium环境变量，需要进入到对应路径下，Desktop安装的路径是：/Applications/Appium.app/Contents/Resources/node_modules/appium-doctor<br>
+未配置appium环境变量，需要进入到对应路径下. <br>
+Desktop安装的路径是：/Applications/Appium.app/Contents/Resources/node_modules/appium-doctor<br>
 执行命令：node appium-doctor.js,可以看到安装成功<br>
 
 8. Appium Python client及驱动的安装
@@ -165,16 +167,16 @@ $ npm install appium-android-driver<br>
 10. 如果安装的dmg Desktop版appum可以直接连接android设备
 配置如下：<br>
 JSON Representation<br>
-{
-  "platformName": "ANDROID",
-  "platformVersion": “5.1.1”,
-  "deviceName": "OPPO A33",
-  "app": “/path/for.apk",
-  "noReset": true,
-  "appPackage": "your.app.package",
-  "appActivity": "you.app.package.MainActivity",
-  "webdriver": "http://0.0.0.0:4723/wd/hub"
-} 
+{<br>
+  "platformName": "ANDROID",<br>
+  "platformVersion": “5.1.1”,<br>
+  "deviceName": "OPPO A33",<br>
+  "app": “/path/for.apk",<br>
+  "noReset": true,<br>
+  "appPackage": "your.app.package",<br>
+  "appActivity": "you.app.package.MainActivity",<br>
+  "webdriver": "http://0.0.0.0:4723/wd/hub"<br>
+} <br>
 点击start session，可以看到手机会启动app<br>
 
 注：检查手机是否连接成功：输入命令$ adb devices<br>
