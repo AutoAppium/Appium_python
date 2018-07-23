@@ -184,3 +184,4 @@ list of devices 不为空，则连接成功。<br>
 
 
   ## 3. IOS真机测试安装步骤 
+参考：[iOS真机运行的环境搭建及配置.md](https://github.com/AutoAppium/appium_frame/blob/master/iOS%E7%9C%9F%E6%9C%BA%E8%BF%90%E8%A1%8C%E7%9A%84%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E5%8F%8A%E9%85%8D%E7%BD%AE.md)
