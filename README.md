@@ -90,13 +90,95 @@
   ## 1. 安装前提
 
   ### 硬件：
-  IOS手机一部
-  Macbook笔记本一台
+  IOS手机一部<br>
+  Macbook笔记本一台<br>
 
   ### 软件：
-  1. OS：MacOS Sierra10.13以上
+  1. OS：MacOS Sierra10以上<br>
   2. 
 
   ## 2. Android测试安装步骤
+1.安装brew
+$ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+mac自带了Ruby，网上很多给的安装命令下载的版本较低，使用上面的命令，可以安装最新的brew，安装成功后，$ brew -v 会显示相应的Homebrew的版本号。
+（官方地址：http://brew.sh/index_zh-cn.html）；
 
+2.安装node，appium的解释器
+$ brew install node
+
+3.安装appium
+  - 通过命令可以下载到最新的appium server版本，命令如下：
+$ npm install -g appium
+如果遇到权限问题，用以下命令：$ sudo npm install -g appium --unsafe-perm=true --allow-root
+  - 可以直接在官网下载appium.dmg安装，http://appium.io/downloads.html
+  
+4.安装sdk
+下载sdk安装包解压后找到解压后的路径（配环境变量会用到）：
+https://dl.google.com/android/adt/adt-bundle-mac-x86_64-20140702.zip
+启动SDK Manager（若需要使用android模拟器需要下载android sdk下的一些工具）：
+cd /Users/xx/Desktop/autotest/adt-bundle-mac/sdk/
+./android sdk
+
+5.安装jdk，记住路径
+
+- jdk下载dmg安装包进行安装：http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
+点击Accept License Agreement按钮，选择Mac版本的jdk进行下载dmg
+- 当在Mac下安装完Java运行环境，而又没有添加JAVA_HOME变量的时候，我们如何得到JAVA_HOME变量的路径呢？
+直接在home目录下执行命令：$ /usr/libexec/java_home [-V]
+即可获得输出：/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home
+
+6. 配置jdk和sdk环境变量(Android)：
+MACbook中打开.bash_profile步骤：
+1）. 启动终端Terminal
+2）. 进入当前用户的home目录, 输入cd ~
+3）. 创建.bash_profile,输入touch .bash_profile
+4）. 编辑.bash_profile文件,输入open -e .bash_profile
+在打开的.bash_profile文件里面输入以下内容，JAVA_HOME，PYTHON，ANDROID_HOME路径需要自己去找。
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home
+export PATH=$JAVA_HOME/bin:$PATH 
+export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
+export PATH=/usr/local/Cellar/python3/3.6.1/Frameworks/Python.framework/Versions/3.6/bin:${PATH}
+export ANDROID_HOME=/Users/xx/Desktop/autotest/adt-bundle-mac/sdk
+export PATH=${PATH}:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools:$ANDROID_HOME/build-tools/23.0.1
+5）. 保存文件，关闭.bash_profile
+6）. 更新刚配置的环境变量, 输入source .bash_profile
+
+7. appium_doctor检测APPium是否安装成功
+未配置appium环境变量，需要进入到对应路径下，Desktop安装的路径是：/Applications/Appium.app/Contents/Resources/node_modules/appium-doctor
+执行命令：node appium-doctor.js,可以看到安装成功
+
+8. Appium Python client及驱动的安装
+- 从pip安装：'Appium-Python-Client'.
+$ pip install Appium-Python-Client
+- 从官网下载源码解压后直接安装：Appium-Python-Client-X.X.tar.gz.
+$ tar -xvf Appium-Python-Client-X.X.tar.gz
+$ cd Appium-Python-Client-X.X
+$ python setup.py install
+- 从GitHub上直接安装.
+$ git clone git@github.com:appium/python-client.git
+$ cd python-client
+$ python setup.py install
+
+9. Android真机运行需要driver
+$ npm install appium-android-driver
+
+10. 如果安装的dmg Desktop版appum可以直接连接android设备
+配置如下：
+JSON Representation
+{
+  "platformName": "ANDROID",
+  "platformVersion": “5.1.1”,
+  "deviceName": "OPPO A33",
+  "app": “/path/for.apk",
+  "noReset": true,
+  "appPackage": "your.app.package",
+  "appActivity": "you.app.package.MainActivity",
+  "webdriver": "http://0.0.0.0:4723/wd/hub"
+} 
+点击start session，可以看到手机会启动app
+
+注：检查手机是否连接成功：输入命令$ adb devices
+list of devices 不为空，则连接成功。
+
+
   ## 3. IOS真机测试安装步骤 
