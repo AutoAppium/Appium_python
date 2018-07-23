@@ -24,30 +24,30 @@
   - brew install node，由于新版的node已经集成了npm，所以node安装成功时npm也一并安装好了。同样可以通过输入 "npm -v" 来测试是否成功安装.
       
   3. 安装ios相关依赖库：
-      - libimobiledevice
+- libimobiledevice
 $ brew install libimobiledevice –HEAD #和iOS通讯使用，获取重要更新<br>
 如果没有安装 libimobiledevice，会导致Appium无法连接到iOS的设备<br>
 Error: No available formula with the name "–head" <br>
 用上面的命令遇到error后用下面的命令安装libimobiledevice<br>
  brew install -s --HEAD libimobiledevice ideviceinstaller<br>
 
-      - carthage
+- carthage
 ios10+以上要安装carthage，ios-deploy，真机需要安装xcpretty：<br>
 $ brew install carthage<br>
 
-      - ideviceinstaller
+- ideviceinstaller
 $ brew install ideviceinstaller   #安装app使用，只在ios9可用。<br>
       
-      - xcpretty
+- xcpretty
 $ gem update –system #最好用最新版本的gem这里请翻墙一下 2.6.3<br>
 $ sudo gem install xcpretty <br>
 安装xcpretty，经常安装失败，没反应，但是大家耐心等待吧，如果时间较长的话，建议大家切换个目录重新安装。<br>
-- 确保只有 gems.ruby-china.org<br>
+-- 确保只有 gems.ruby-china.org<br>
 $ gem sources --add https://gems.ruby-china.org/ --remove https://rubygems.org/<br>
 $ gem sources -l<br>
 https://gems.ruby-china.org<br>
 
-      - ios-deploy
+- ios-deploy
 $ npm install -g ios-deploy<br>
 如果要在iOS10+的系统上使用appium，则需要安装ios-deploy<br>
 安装iOS-deploy若遇到以下错误: <br>
@@ -66,10 +66,10 @@ $ cnpm install -g ios-deploy<br>
 ### 安装Appium
       
   4. 安装Appium
-      - -> 直接下载dmg文件安装Appium Desktop
+   - -> 直接下载dmg文件安装Appium Desktop
 https://github.com/appium/appium-desktop/releases/tag/v1.6.x
 
-      - -> 命令行安装appium
+   - -> 命令行安装appium
 Git的方式安装需要先装git：
 $ brew install git
 安装前把历史版本卸载掉：
@@ -94,13 +94,11 @@ $ sudo npm cache clean -f<br>
 $ sudo npm install -g n<br>
 （note： n 是node的版本管理工具。）<br>
 
-      
-  5. 检查是否安装成功需要用appium-doctor
-      先后用以下命令检查是否安装完成<br>
+
+  5. 检查是否安装成功需要用appium-doctor<br>
+先后用以下命令检查是否安装完成<br>
 $ npm install -g appium-doctor<br>
 $ appium-doctor<br>
-      
-
 
 ### 安装WDA
   6. Xcode最新版本下载安装在最新的Mac系统下
@@ -108,21 +106,21 @@ Xcode等应用的旧版本的下载地址：下载完之后手动解压，安装
 https://developer.apple.com/download/more/ <br>
 
   7. 安装appium-xcuitest-driver依赖
- 参考：<br>
+ 参考：[]()<br>
  
 
 ### 安装python-Appium核心库
-  8. Appium Python client安装
+  8. Appium Python client安装<br>
 $ pip install Appium-Python-Client<br>
 也可直接使用pycharm安装Appium-Python-Client和selenium。完成后可以看到对应的版本号<br>
   
-  9. 生成在真机上运行的包：
+  9. 生成在真机上运行的包：<br>
 如果需要使用打包好的ipa包或者app包来进行安装，则需要用源码来打包成ipa进行安装。<br>
 如果知道bundle ID，可以直接下载安装好对应bundle ID的包, 直接进行启动app。<br>
 
 
 ### 启动Appium，真机运行
-  10. AppiumDesktop运行程序
+  10. AppiumDesktop运行程序<br>
 1）运行Appium-Desktop，开启start server<br>
 2）连接IOS手机<br>
 3）点击start new session<br>
@@ -133,8 +131,7 @@ $ pip install Appium-Python-Client<br>
 ### 脚本运行
  1）启动Appium Desktop，开启start server<br>
  2）连接IOS手机<br>
- 3）编写客户端代码<br>
-  - 假设我们的代码放在目录/Desktop/AppiumDemo 中。<br>
+ 3）编写客户端代码<br>假设我们的代码放在目录/Desktop/AppiumDemo 中。<br>
  4）创建文件demo_appium.py , 编辑内容：<br>
 ```python
   #coding=utf-8
