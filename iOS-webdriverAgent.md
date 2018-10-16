@@ -48,25 +48,25 @@ cd /usr/local/lib/node_modules/appium/node_modules/appium-xcuitest-driver/WebDri
  idevice_id -l<br>
 然后安装这个webdriverAgent到手机上，记得替换uuid。Build the project:<br>
 
-xcodebuild -project WebDriverAgent.xcodeproj -scheme WebDriverAgentRunner -destination 'id=74dbe74813503a6d49cc8f16c47d23a9fd4e40d3' test <br>
+xcodebuild -project WebDriverAgent.xcodeproj -scheme WebDriverAgentRunner -destination 'id=7xxxxbbbb' test <br>
 这时候可以看到手机上多了一个WebdriverAgent的app<br>
 运行成功时，在控制台应该可以打印出一个Ip地址和端口号<br>
 
-- 2017-12-21 17:48:28.668160+0800 WebDriverAgentRunner-Runner[1792:946737] Continuing to run tests in the background with task ID 1
-Test Suite 'All tests' started at 2017-12-21 17:48:29.366
-Test Suite 'WebDriverAgentRunner.xctest' started at 2017-12-21 17:48:29.367
-Test Suite 'UITestingUITests' started at 2017-12-21 17:48:29.367
-Test Case '-[UITestingUITests testRunner]' started.
-    t =     0.00s Start Test at 2017-12-21 17:48:29.369
-    t =     0.00s Set Up
-2017-12-21 17:48:29.395509+0800 WebDriverAgentRunner-Runner[1792:946737] Built at Dec 21 2017 12:41:55
-2017-12-21 17:48:29.442673+0800 WebDriverAgentRunner-Runner[1792:946737] ServerURLHere->http://111.111.1.111:8100<-ServerURLHere
+- 2017-12-21 17:48:28.668160+0800 WebDriverAgentRunner-Runner[1792:946737] Continuing to run tests in the background with task ID 1<br>
+Test Suite 'All tests' started at 2017-12-21 17:48:29.366<br>
+Test Suite 'WebDriverAgentRunner.xctest' started at 2017-12-21 17:48:29.367<br>
+Test Suite 'UITestingUITests' started at 2017-12-21 17:48:29.367<br>
+Test Case '-[UITestingUITests testRunner]' started.<br>
+    t =     0.00s Start Test at 2017-12-21 17:48:29.369<br>
+    t =     0.00s Set Up<br>
+2017-12-21 17:48:29.395509+0800 WebDriverAgentRunner-Runner[1792:946737] Built at Dec 21 2017 12:41:55<br>
+2017-12-21 17:48:29.442673+0800 WebDriverAgentRunner-Runner[1792:946737] <br>ServerURLHere->http://111.111.1.111:8100<-ServerURLHere
 
 9. 检查是否成功
-在网址上输入http://(iP地址):(端口号)/status，如果网页显示了一些json格式的数据，说明运行成功。
+在网址上输入http://(iP地址):(端口号)/status，如果网页显示了一些json格式的数据，说明运行成功。<br>
 
 10. WebDriverAgent放到Appium目录下
-将WebDriverAgent文件夹覆盖到appium的下面WebDriverAgent目录
-进入WebDriverAgent文件夹
-cd /usr/local/lib/node_modules/appium/node_modules/appium-xcuitest-driver/WebDriverAgent
-（如果WebDriverAgent 所在路径和此不同，请自行查找）
+将WebDriverAgent文件夹覆盖到appium的下面WebDriverAgent目录<br>
+进入WebDriverAgent文件夹<br>
+cd /usr/local/lib/node_modules/appium/node_modules/appium-xcuitest-driver/WebDriverAgent<br>
+（如果WebDriverAgent 所在路径和此不同，请自行查找）<br>
