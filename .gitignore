@@ -1,0 +1,26 @@
+# 此为注释 - 将被git忽略
+# *.a 忽略所有以.a结尾的文件
+# !lib.a 但lib.a除外
+# */test_result/*   # 忽略项目根目录下的test_result目录下的全部内容
+.idea/
+*.idea/
+*/.idea/
+
+*/.DS_Store
+.DS_Store
+*.DS_Store
+
+*.pyc
+/.metadata/
+*.project
+*.pydevproject
+*/.settings/
+*.settings/*
+*.settings
+git command.md
+
+*/test_result/*
+!*/test_result/  # 不忽略项目根目录下的test_result文件夹
+
+# 若不起作用，先执行git命令：git rm -r --cached .
+
