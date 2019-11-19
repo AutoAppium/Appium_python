@@ -105,7 +105,7 @@ Xcode等应用的旧版本的下载地址：下载完之后手动解压，安装
 https://developer.apple.com/download/more/ <br>
 
   7. 安装appium-xcuitest-driver依赖
- 参考：[]()<br>
+ 参考：[Appium --XCUITest Driver在ios真机上配置](https://blog.csdn.net/yinshuilan/article/details/80626314)<br>
  
 
 ### 安装python-Appium核心库
