@@ -70,3 +70,6 @@ Test Case '-[UITestingUITests testRunner]' started.<br>
 进入WebDriverAgent文件夹<br>
 cd /usr/local/lib/node_modules/appium/node_modules/appium-xcuitest-driver/WebDriverAgent<br>
 （如果WebDriverAgent 所在路径和此不同，请自行查找）<br>
+
+
+参考官网：[Setting up iOS Real Devices Tests with XCUITest](https://github.com/appium/appium-xcuitest-driver/blob/master/docs/real-device-config.md)
