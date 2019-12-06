@@ -53,6 +53,7 @@
       2. Appium Server： 
       - 安装appium server命令行：
       npm install -g appium@1.8.1 （此方法需要翻墙，安装appium-chromedriver时）
+      - 更新命令：npm install appium -g --chromedriver_cdnurl=http://cdn.npm.taobao.org/dist/chromedriver
       - 直接在cmd终端输入appium即可启动appium server
       
   6. 选择Python版本的Lib: Appium-Python-Client-0.22.tar.gz
